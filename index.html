@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoDesafio: Missão Ciências 6º Ano</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="game-container">
+    <header class="main-header">
+      <div class="header-top">
+        <button id="theme-toggle" class="theme-btn" aria-label="Alternar modo escuro">🌙 Modo Escuro</button>
+      </div>
+      <h1>🌱 EcoDesafio 🌍</h1>
+      <p class="subtitle">Ciências - 6º Ano</p>
+    </header>
+
+    <main id="app">
+      <!-- TELA 1: INÍCIO -->
+      <section id="start-screen" class="screen active">
+        <h2>Boas-vindas, Explorador(a)!</h2>
+        <p>Prove seus conhecimentos sobre o planeta Terra, ecossistemas, misturas e a natureza para completar esta missão de 10 desafios.</p>
+        <button id="btn-start" class="btn-primary">Começar Jogo 🚀</button>
+      </section>
+
+      <!-- TELA 2: PERGUNTAS -->
+      <section id="game-screen" class="screen">
+        <div class="status-bar">
+          <div class="status-item">
+            <span>Pontos:</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="status-item">
+            <span>Pergunta:</span>
+            <strong id="question-number">1/10</strong>
+          </div>
+        </div>
+
+        <div class="card-question">
+          <h3 id="question-text">Texto da pergunta aqui...</h3>
+          <div id="options-container" class="options-grid">
+            <!-- As opções serão geradas dinamicamente via JavaScript -->
+          </div>
+        </div>
+
+        <div id="feedback" class="feedback hidden"></div>
+        <button id="btn-next" class="btn-secondary hidden">Próxima Pergunta ➡️</button>
+      </section>
+
+      <!-- TELA 3: FINAL -->
+      <section id="end-screen" class="screen">
+        <h2>Missão Concluída! 🎉</h2>
+        <p class="final-message" id="final-message">Você fez X pontos!</p>
+        <button id="btn-restart" class="btn-primary">Jogar Novamente 🔄</button>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>Desenvolvido para a disciplina de Ciências • 6º Ano</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
